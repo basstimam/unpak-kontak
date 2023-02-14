@@ -15,10 +15,10 @@ const ContactList = () => {
     const { data } = useSWR("contacts", fetch);
     if (!data) return <p className="flex justify-center font-bold text-3xl my-20">Loading...</p>;
 
-    const deleteContact = async (id) => {
-        await axios.delete(`https://unpak-express-production.up.railway.app/contacts/${id}`);
-        mutate("contacts");
-    };
+    // const deleteContact = async (id) => {
+    //     await axios.delete(`https://unpak-express-production.up.railway.app/contacts/${id}`);
+    //     mutate("contacts");
+    // };
 
     return (
         <div className="overflow-x-auto">
