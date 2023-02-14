@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div className="container">
             <div className='flex-col space-y-1 flex justify-center items-center '>
-                <p className='text-xl font-semibold font-poppins'> Daftar Kontak Universitas Pakuan </p>
+                <p className='text-xl font-semibold font-poppins'> Daftar Kontak Dosen Universitas Pakuan </p>
                 <br />
                 <br />
                 <p className='text-sm'> Berisi kontak staff dan dosen aktif universitas pakuan</p>

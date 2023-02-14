@@ -14,7 +14,7 @@ const EditContact = () => {
     useEffect(() => {
         const getProductById = async () => {
 
-            const response = await axios.get(`http://localhost:5000/contacts/${id}`);
+            const response = await axios.get(`https://unpak-express-production.up.railway.app/contacts/${id}`);
             setName(response.data.name);
             setDepartment(response.data.department);
             setPhone(response.data.phone);
@@ -28,7 +28,7 @@ const EditContact = () => {
 
     const updateContact = async (e) => {
         e.preventDefault();
-        await axios.patch(`http://localhost:5000/contacts/${id}`, {
+        await axios.patch(`https://unpak-express-production.up.railway.app/contacts/${id}`, {
             name: name,
             department: department,
             phone: phone,

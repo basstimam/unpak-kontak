@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css';
-import Navbar from './components/Navbar';
+
 import ContactList from './components/ContactList';
 import Header from './components/Header';
-import EditContact from './components/EditContact';
-import AddContact from './components/AddContact';
+
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className='container'>
-      <Navbar />
+
       <Header />
       <BrowserRouter>
         <Routes>
@@ -20,6 +20,7 @@ function App() {
           <Route path="/edit/:id" element={<EditContact />} /> */}
         </Routes>
       </BrowserRouter>
+      <Footer />
 
 
 

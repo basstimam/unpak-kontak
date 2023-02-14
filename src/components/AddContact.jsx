@@ -10,7 +10,7 @@ const AddContact = () => {
 
     const saveContact = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:5000/contacts", {
+        await axios.post("https://unpak-express-production.up.railway.app/contacts", {
             name: name,
             department: department,
             phone: phone,

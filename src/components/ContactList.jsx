@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
-import AddContact from "./AddContact";
+
 import useSWR, { useSWRConfig } from "swr";
-import Footer from "./Footer";
+
 
 const ContactList = () => {
     const { mutate } = useSWRConfig();
     const fetch = async () => {
-        const response = await axios.get("http://localhost:5000/contacts");
+        const response = await axios.get("https://unpak-express-production.up.railway.app/contacts");
         return response.data;
     };
 
@@ -16,7 +16,7 @@ const ContactList = () => {
     if (!data) return <p className="flex justify-center font-bold text-3xl my-20">Loading...</p>;
 
     const deleteContact = async (id) => {
-        await axios.delete(`http://localhost:5000/contacts/${id}`);
+        await axios.delete(`https://unpak-express-production.up.railway.app/contacts/${id}`);
         mutate("contacts");
     };
 
@@ -103,7 +103,6 @@ const ContactList = () => {
                 </tbody>
             </table>
 
-            <Footer />
         </div>
     );
 };
